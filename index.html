@@ -448,6 +448,20 @@
     background: rgba(0,200,255,0.08);
     border-color: var(--neon2); color: var(--neon2);
   }
+  /* Marquee */
+.marquee-belt { overflow: hidden; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 18px 0; position: relative; }
+.marquee-belt::before, .marquee-belt::after {
+  content: ''; position: absolute; top: 0; bottom: 0; width: 100px; z-index: 2;
+}
+.marquee-belt::before { left: 0; background: linear-gradient(90deg, var(--bg), transparent); }
+.marquee-belt::after { right: 0; background: linear-gradient(-90deg, var(--bg), transparent); }
+.section-alt .marquee-belt::before { background: linear-gradient(90deg, var(--bg-2), transparent); }
+.section-alt .marquee-belt::after { background: linear-gradient(-90deg, var(--bg-2), transparent); }
+.marquee-track { display: flex; gap: 0; width: max-content; animation: marquee 30s linear infinite; }
+.marquee-item { font-family: 'DM Mono', monospace; font-size: .7rem; letter-spacing: .12em; color: var(--text-3); white-space: nowrap; padding: 0 28px; text-transform: uppercase; }
+.marquee-sep { color: var(--accent); opacity: .4; }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
 
   /* EXPERIENCE */
   #experience { border-top: 1px solid var(--border); }
@@ -943,6 +957,45 @@
       </div>
     </div>
   </div>
+   <div class="marquee-belt reveal">
+    <div class="marquee-track">
+      <span class="marquee-item">Python</span><span class="marquee-item marquee-sep">◆</span>
+      <span class="marquee-item">Cisco IOS</span><span class="marquee-item marquee-sep">◆</span>
+      <span class="marquee-item">NX-OS</span><span class="marquee-item marquee-sep">◆</span>
+      <span class="marquee-item">TCP/IP</span><span class="marquee-item marquee-sep">◆</span>
+      <span class="marquee-item">BGP / OSPF</span><span class="marquee-item marquee-sep">◆</span>
+      <span class="marquee-item">VLAN</span><span class="marquee-item marquee-sep">◆</span>
+      <span class="marquee-item">VPN</span><span class="marquee-item marquee-sep">◆</span>
+      <span class="marquee-item">PyATS</span><span class="marquee-item marquee-sep">◆</span>
+      <span class="marquee-item">Netmiko</span><span class="marquee-item marquee-sep">◆</span>
+      <span class="marquee-item">YANG</span><span class="marquee-item marquee-sep">◆</span>
+      <span class="marquee-item">Netconf</span><span class="marquee-item marquee-sep">◆</span>
+      <span class="marquee-item">Linux</span><span class="marquee-item marquee-sep">◆</span>
+      <span class="marquee-item">SQL</span><span class="marquee-item marquee-sep">◆</span>
+      <span class="marquee-item">Wireshark</span><span class="marquee-item marquee-sep">◆</span>
+      <span class="marquee-item">MACsec</span><span class="marquee-item marquee-sep">◆</span>
+      <span class="marquee-item">ICAM</span><span class="marquee-item marquee-sep">◆</span>
+      <span class="marquee-item">NXAPI</span><span class="marquee-item marquee-sep">◆</span>
+      <!-- duplicate for seamless loop -->
+      <span class="marquee-item">Python</span><span class="marquee-item marquee-sep">◆</span>
+      <span class="marquee-item">Cisco IOS</span><span class="marquee-item marquee-sep">◆</span>
+      <span class="marquee-item">NX-OS</span><span class="marquee-item marquee-sep">◆</span>
+      <span class="marquee-item">TCP/IP</span><span class="marquee-item marquee-sep">◆</span>
+      <span class="marquee-item">BGP / OSPF</span><span class="marquee-item marquee-sep">◆</span>
+      <span class="marquee-item">VLAN</span><span class="marquee-item marquee-sep">◆</span>
+      <span class="marquee-item">VPN</span><span class="marquee-item marquee-sep">◆</span>
+      <span class="marquee-item">PyATS</span><span class="marquee-item marquee-sep">◆</span>
+      <span class="marquee-item">Netmiko</span><span class="marquee-item marquee-sep">◆</span>
+      <span class="marquee-item">YANG</span><span class="marquee-item marquee-sep">◆</span>
+      <span class="marquee-item">Netconf</span><span class="marquee-item marquee-sep">◆</span>
+      <span class="marquee-item">Linux</span><span class="marquee-item marquee-sep">◆</span>
+      <span class="marquee-item">SQL</span><span class="marquee-item marquee-sep">◆</span>
+      <span class="marquee-item">Wireshark</span><span class="marquee-item marquee-sep">◆</span>
+      <span class="marquee-item">MACsec</span><span class="marquee-item marquee-sep">◆</span>
+      <span class="marquee-item">ICAM</span><span class="marquee-item marquee-sep">◆</span>
+      <span class="marquee-item">NXAPI</span><span class="marquee-item marquee-sep">◆</span>
+    </div>
+   </div>
 </section>
 
 <section id="experience">
