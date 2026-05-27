@@ -47,7 +47,7 @@
     "name": "Cisco Systems"
   },
   "knowsAbout": ["Network Automation", "Python", "NetDevOps", "YANG", "NETCONF", "Cisco Nexus", "Backend Engineering"],
-  "sameAs": ["https://github.com/nikhilnim"]
+  "sameAs": ["https://github.com/nik-nim"]
 }
 </script>
 
@@ -1397,7 +1397,7 @@ html, body {
       <div class="github-loading">⟳ &nbsp;Fetching repositories…</div>
     </div>
     <div class="github-section-cta reveal">
-      <a href="https://github.com/nikhilnim" target="_blank" rel="noopener">
+      <a href="https://github.com/nik-nim" target="_blank" rel="noopener">
         ↗ View all repositories on GitHub
       </a>
     </div>
@@ -1874,7 +1874,7 @@ const LANG_COLORS = {
 async function loadGithubRepos() {
   const grid = document.getElementById('github-grid');
   try {
-    const res = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=6&type=public`);
+    const res = await fetch(`https://api.github.com/users/${nik-nim}/repos?sort=updated&per_page=6&type=public`);
     if (!res.ok) throw new Error('GitHub API error');
     const repos = await res.json();
     if (!repos.length) throw new Error('No repos found');
@@ -1911,8 +1911,8 @@ async function loadGithubRepos() {
     grid.innerHTML = `
       <div style="grid-column:1/-1; text-align:center; padding:40px; color:var(--text-dim); font-size:0.72rem; letter-spacing:0.12em;">
         GitHub repos will appear here once connected.<br>
-        <a href="https://github.com/${GITHUB_USERNAME}" target="_blank" style="color:var(--neon2);text-decoration:none;margin-top:8px;display:inline-block;">
-          → github.com/${GITHUB_USERNAME}
+        <a href="https://github.com/${nik-nim}" target="_blank" style="color:var(--neon2);text-decoration:none;margin-top:8px;display:inline-block;">
+          → github.com/${nik-nim}
         </a>
       </div>
     `;
