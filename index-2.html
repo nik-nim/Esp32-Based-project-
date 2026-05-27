@@ -1863,7 +1863,7 @@ document.querySelectorAll('.cert-card').forEach((el, i) => {
 /* ==============================
    8. GITHUB LIVE REPO CARDS
 ============================== */
-const GITHUB_USERNAME = 'nikhilnim';
+const GITHUB_USERNAME = 'nik-nim';
 const LANG_COLORS = {
   'Python': '#3572A5', 'JavaScript': '#f1e05a', 'C++': '#f34b7d',
   'C': '#555555', 'HTML': '#e34c26', 'Shell': '#89e051',
@@ -1874,7 +1874,7 @@ const LANG_COLORS = {
 async function loadGithubRepos() {
   const grid = document.getElementById('github-grid');
   try {
-    const res = await fetch(`https://api.github.com/users/${nik-nim}/repos?sort=updated&per_page=6&type=public`);
+    const res = await fetch(`https://api.github.com/users/nik-nim/repos?sort=updated&per_page=6&type=public`);
     if (!res.ok) throw new Error('GitHub API error');
     const repos = await res.json();
     if (!repos.length) throw new Error('No repos found');
@@ -1911,8 +1911,8 @@ async function loadGithubRepos() {
     grid.innerHTML = `
       <div style="grid-column:1/-1; text-align:center; padding:40px; color:var(--text-dim); font-size:0.72rem; letter-spacing:0.12em;">
         GitHub repos will appear here once connected.<br>
-        <a href="https://github.com/${nik-nim}" target="_blank" style="color:var(--neon2);text-decoration:none;margin-top:8px;display:inline-block;">
-          → github.com/${nik-nim}
+        <a href="https://github.com/nik-nim" target="_blank" style="color:var(--neon2);text-decoration:none;margin-top:8px;display:inline-block;">
+          → github.com/nik-nim
         </a>
       </div>
     `;
